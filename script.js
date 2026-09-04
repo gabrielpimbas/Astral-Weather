@@ -25,7 +25,7 @@ const resultado = document.getElementById("resultado");
 // clicar no botão
 botaoBuscar.addEventListener("click", buscarClima);
 
-// pesquisar com enter
+// pesquisar com enter - Melhoria 1
 campoCidade.addEventListener("keydown", function (evento) {
   if (evento.key === "Enter") {
     buscarClima();
@@ -129,15 +129,10 @@ function buscarClima() {
 
       // dados do clima
       const temperatura = atual.temperature_2m;
-
       const sensacao = atual.apparent_temperature;
-
       const umidade = atual.relative_humidity_2m;
-
       const vento = atual.wind_speed_10m;
-
       const codigo = atual.weather_code;
-
       const horario = atual.time;
 
       // deixa o horário mais fácil de ler
@@ -145,18 +140,13 @@ function buscarClima() {
 
       // mostra os dados no console
       console.log("Temperatura:", temperatura);
-
       console.log("Sensação térmica:", sensacao);
-
       console.log("Umidade:", umidade);
-
       console.log("Vento:", vento);
-
       console.log("Código do clima:", codigo);
-
       console.log("Horário da atualização:", horario);
 
-      // pega texto e emoji
+      // pega texto e emoji - melhoria 2
       const tempo = descobrirTempo(codigo);
 
       // localização
@@ -239,7 +229,7 @@ function buscarClima() {
     });
 }
 
-// transforma o código da api
+// transforma o código da api para mostrar o clima
 function descobrirTempo(codigo) {
   // céu limpo
   if (codigo === 0) {

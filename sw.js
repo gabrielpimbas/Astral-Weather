@@ -1,5 +1,5 @@
+// parte que prepara o cache do app
 const CACHE_NAME = "clima-app-v1";
-
 const ARQUIVOS_PARA_CACHE = [
   "index.html",
   "style.css",
@@ -9,7 +9,7 @@ const ARQUIVOS_PARA_CACHE = [
   "icons/icon-512.png",
 ];
 
-// Guarda os arquivos no cache assim que o Service Worker é instalado
+// guarda os arquivos no cache assim que o Service Worker é instalado
 self.addEventListener("install", (evento) => {
   evento.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -18,7 +18,7 @@ self.addEventListener("install", (evento) => {
   );
 });
 
-// Intercepta cada requisição da página
+// intercepta cada requisição da página
 self.addEventListener("fetch", (evento) => {
   evento.respondWith(
     caches.match(evento.request).then((respostaCache) => {

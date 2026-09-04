@@ -13,7 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* topo */
+/* cabeçalho */
 
 header {
   background-color: #1d1e30;
@@ -33,7 +33,7 @@ header p {
   margin-top: 4px;
 }
 
-/* conteúdo */
+/* conteúdo principal */
 
 main {
   min-height: 70vh;
