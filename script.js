@@ -1,4 +1,4 @@
-// registro do service workers
+// registro do service workers - 1 parte
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
@@ -13,26 +13,26 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
-// urls das APIs
+// urls das APIs - 2 parte
 const GEO_URL = "https://geocoding-api.open-meteo.com/v1/search";
 const CLIMA_URL = "https://api.open-meteo.com/v1/forecast";
 
-// elementos do html
+// elementos do html - 3 parte
 const campoCidade = document.getElementById("cidade");
 const botaoBuscar = document.getElementById("buscar");
 const resultado = document.getElementById("resultado");
 
-// clicar no botão
+// clicar no botão - 4 parte
 botaoBuscar.addEventListener("click", buscarClima);
 
-// pesquisar com enter - Melhoria 1
+// pesquisar com enter - Melhoria 1 - 5 parte
 campoCidade.addEventListener("keydown", function (evento) {
   if (evento.key === "Enter") {
     buscarClima();
   }
 });
 
-// função principal
+// função principal - 6 parte
 function buscarClima() {
   const cidade = campoCidade.value.trim();
 
@@ -46,7 +46,7 @@ function buscarClima() {
 
     return;
   }
-
+  // mostra mensagem de busca
   resultado.innerHTML = `
     <p class="mensagem">
       Buscando...
@@ -135,7 +135,7 @@ function buscarClima() {
       const codigo = atual.weather_code;
       const horario = atual.time;
 
-      // deixa o horário mais fácil de ler
+      // deixa o horário mais fácil de ler 
       const horarioFormatado = horario.replace("T", " às ");
 
       // mostra os dados no console
