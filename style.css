@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #141522;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* topo */
+
+header {
+  background-color: #1d1e30;
+  text-align: center;
+  padding: 20px 15px;
+  border-bottom: 2px solid #e6b94e;
+}
+
+header h1 {
+  color: #e6b94e;
+  font-size: 25px;
+}
+
+header p {
+  color: #aaaabc;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* conteúdo */
+
+main {
+  min-height: 70vh;
+  padding: 35px 15px;
+}
+
+/* caixa de pesquisa */
+
+.consulta {
+  width: 100%;
+  padding: 20px;
+
+  background-color: #222338;
+
+  border-radius: 8px;
+}
+
+.consulta h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.consulta label {
+  font-size: 14px;
+}
+
+/* input */
+
+.consulta input {
+  width: 100%;
+
+  min-height: 44px;
+
+  padding: 10px;
+
+  margin-top: 6px;
+  margin-bottom: 10px;
+
+  background-color: #2b2c42;
+
+  border: 1px solid #55566d;
+  border-radius: 5px;
+
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+
+  /* ajuda no celular */
+  font-size: 16px;
+
+  outline: none;
+}
+
+.consulta input:focus {
+  border-color: #e6b94e;
+}
+
+/* botão */
+
+.consulta button {
+  width: 100%;
+
+  min-height: 44px;
+
+  padding: 10px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #e6b94e;
+
+  color: #191919;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.consulta button:hover {
+  background-color: #d2a942;
+}
+
+/* resultado */
+
+#resultado {
+  width: 100%;
+
+  margin-top: 18px;
+}
+
+.card-clima {
+  background-color: #222338;
+
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+.icone {
+  text-align: center;
+  font-size: 55px;
+}
+
+.card-clima h2 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.local {
+  text-align: center;
+
+  color: #9999aa;
+
+  font-size: 13px;
+
+  margin-bottom: 7px;
+}
+
+.condicao {
+  text-align: center;
+
+  color: #e6b94e;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+.card-clima p {
+  margin-top: 8px;
+}
+
+.mensagem {
+  background-color: #222338;
+
+  padding: 14px;
+
+  text-align: center;
+
+  border-radius: 6px;
+}
+
+/* rodapé */
+
+footer {
+  text-align: center;
+
+  padding: 16px;
+
+  background-color: #1d1e30;
+
+  border-top: 1px solid #393a50;
+
+  color: #9999aa;
+
+  font-size: 12px;
+}
+
+/* telas maiores */
+
+@media (min-width: 600px) {
+  main {
+    padding-top: 55px;
+  }
+
+  .consulta {
+    width: 400px;
+    margin: auto;
+    padding: 25px;
+  }
+
+  #resultado {
+    width: 400px;
+    margin: 20px auto;
+  }
+
+  header h1 {
+    font-size: 29px;
+  }
+}

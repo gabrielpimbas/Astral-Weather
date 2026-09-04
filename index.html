@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astral Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Astral Weather</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="icon" type="image/png" href="icons/icon-192.png" />
+
+      <!-- liga o manifest -->
+      <link rel="manifest" href="manifest.json" />
+
+      <!-- cor principal do app -->
+      <meta name="theme-color" content="#e6b94e" />
+
+      <!-- ícone usado no iphone -->
+      <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+      <!-- deixa abrir como app no iphone -->
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+    </head>
+  </head>
+
+  <body>
+    <!-- cabeçalho -->
+    <header>
+      <h1>✦ Astral Weather</h1>
+      <p>Descubra o clima da sua cidade</p>
+    </header>
+
+    <main>
+      <!-- parte da pesquisa -->
+      <section class="consulta">
+        <h2>Consultar clima</h2>
+        <label for="cidade"> Digite uma cidade: </label>
+        <input type="text" id="cidade" placeholder="Ex: Lages" />
+        <button type="button" id="buscar">Buscar</button>
+      </section>
+
+      <!-- resultado aparece aqui -->
+      <section id="resultado"></section>
+    </main>
+
+    <!-- rodapé -->
+    <footer>
+      <p>&copy; 2026 Astral Weather — Feito por Gabriel</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
